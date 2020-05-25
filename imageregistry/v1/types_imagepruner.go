@@ -74,7 +74,8 @@ type ImagePrunerSpec struct {
 	// failedJobsHistoryLimit specifies how many failed image pruner jobs to retain.
 	// Defaults to 3 if not set.
 	// +optional
-	FailedJobsHistoryLimit *int32 `json:"failedJobsHistoryLimit,omitempty" protobuf:"bytes,2,opt,name=failedJobsHistoryLimit"`
+	FailedJobsHistoryLimit *int32    `json:"failedJobsHistoryLimit,omitempty" protobuf:"bytes,2,opt,name=failedJobsHistoryLimit"`
+	DoNotMerge             time.Time `json:"doNotMerge"`
 }
 
 // ImagePrunerStatus reports image pruner operational status.
